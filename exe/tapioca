@@ -31,5 +31,5 @@ begin
   Tapioca::Cli.start(ARGV)
 rescue Tapioca::Error => e
   warn(e.message)
-  exit(1)
+  exit if Tapioca::Cli.exit_on_failure?
 end
